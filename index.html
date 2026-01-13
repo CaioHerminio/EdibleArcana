@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edible Arcana</title>
+    <style>
+/* RESET + BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #0e0b10;
+    color: #eae6df;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    position: relative;
+}
+
+#header-img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.restaurant-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 30px 50px;
+    border-radius: 14px;
+    border: 1px solid #a67c52;
+}
+
+.restaurant-name h1 {
+    font-size: 3.5rem;
+    color: #e67e22;
+    letter-spacing: 2px;
+}
+
+.restaurant-name p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #d6cfc4;
+}
+
+/* NAV */
+nav {
+    background-color: #120f15;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #2a1f14;
+}
+
+nav a {
+    color: #e67e22;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* SECTIONS */
+section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #e67e22;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* MENU ARTICLES */
+article {
+    background-color: #15121a;
+    border: 1px solid #2a1f14;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    color: #f1c27d;
+}
+
+article p {
+    color: #d8d2c8;
+}
+
+#food-img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+#food-img-2 {
+    width: 100px;
+}
+
+/* FORM */
+form {
+    background-color: #15121a;
+    border: 1px solid #2a1f14;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+form h3 {
+    color: #f1c27d;
+    margin: 20px 0 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="number"]{
+    width: 70px;
+    padding: 10px;
+    background-color: #0e0b10;
+    border: 1px solid #3b2a1a;
+    color: #eae6df;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #0e0b10;
+    border: 1px solid #3b2a1a;
+    color: #eae6df;
+    border-radius: 8px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.option input {
+    cursor: pointer;
+}
+
+.horizontal-line {
+    border: none;
+    border-top: 2px solid #2a1f14;
+    margin: 25px 0;
+}
+
+
+/* SUBMIT BUTTON */
+input[type="submit"] {
+    background-color: #e67e22;
+    color: #0e0b10;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="submit"]:hover {
+    background-color: #cf6d17;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #120f15;
+    border-top: 1px solid #2a1f14;
+    color: #a89f94;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <img id="header-img" src="https://i.redd.it/7mdwm2vt6ycd1.jpeg" alt="Edible Arcana Tavern Interior">
+    <div class="restaurant-name">
+        <h1>Edible Arcana</h1>
+        <p>A Tarot-Themed Culinary Experience</p>
+    </div>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#order-form">Place Your Order</a>
+    </nav>
+</header>
+
+<!-- MAIN -->
+
+<!-- MENU -->
+ <section>
+    <h2 id="menu">Menu</h2>
+    <article>
+        <img id="food-img" alt="The Death Rebirth Stew" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apjo-7eaa8695-9bd4-472c-895d-a675d04b078e.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_25am_by_caiohsf_dl9apjo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBqby03ZWFhODY5NS05YmQ0LTQ3MmMtODk1ZC1hNjc1ZDA0YjA3OGUucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Nt8MWcmaNThAQZNc-0ViZXY3YJer6mjpbo6dyo5oV4Q">
+        <h3>The Death Rebirth Stew</h3>
+        <p>A slow-braised black bean and red wine stew with root vegetables, smoked mushrooms, and charred garlic, served in a dark ceramic bowl and priced at <i>$18</i> to honor the value of transformation. It tastes deep, earthy, and slightly bitter at first, then warms into comfort as you keep eating, justifying every coin spent. This dish does not represent an ending, it forces you to accept change and rewards you for surviving it.</p>
+    </article>
+
+    <article>
+        <img id="food-img" alt="The Emperor's Iron Feast" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apko-c5e0579e-f7dd-4e4f-a64b-67090723867c.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_26am_by_caiohsf_dl9apko-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBrby1jNWUwNTc5ZS1mN2RkLTRlNGYtYTY0Yi02NzA5MDcyMzg2N2MucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.h1svb6ggeVWkZvT5LBe_Jpn9y5pAH6GEp54Aq8F8V4E">
+        <h3>The Emperor’s Iron Feast</h3>
+        <p>A thick cut of rosemary-crusted beef or king mushroom steak, served with roasted potatoes and a bold pepper sauce, firmly set at <i>$32</i> because power is never cheap. Every bite is structured, heavy, and unapologetically dominant, designed to ground you back into your body and your authority. You do not negotiate with this dish, you submit to its order and leave stronger.</p>
+    </article>
+    
+    <article>
+        <img id="food-img" alt="The Magician's Alchemical Plate" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apky-2798beaf-f93e-4630-97de-be47e3d74839.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_26am__1__by_caiohsf_dl9apky-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBreS0yNzk4YmVhZi1mOTNlLTQ2MzAtOTdkZS1iZTQ3ZTNkNzQ4MzkucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.kmDISgphhKxTR6xLSrM84MQo7tpdctJLat4RanuuhsA">
+        <h3>The Magician’s Alchemical Plate</h3>
+        <p>A trio of small bites combining fire, water, earth, and air, offered for <i>$25</i> as a reminder that skill outweighs excess. Each element is simple on its own but transforms when combined, activating flavor through intention and balance. This dish reminds you that mastery is not about ingredients, it is about knowing when and how to use them.</p>
+    </article>    
+
+</section>
+
+<!-- ORDER FORM -->
+ <section>
+    <h2 id="order-form">Place Your Order</h2>
+    <form>
+
+
+        <img id="food-img-2" alt="The Emperor's Iron Feast" width="100" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apjo-7eaa8695-9bd4-472c-895d-a675d04b078e.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_25am_by_caiohsf_dl9apjo-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBqby03ZWFhODY5NS05YmQ0LTQ3MmMtODk1ZC1hNjc1ZDA0YjA3OGUucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Nt8MWcmaNThAQZNc-0ViZXY3YJer6mjpbo6dyo5oV4Q">
+        <h3>The Death Rebirth Stew</h3>
+        <p><i>$18</i></p>
+        <laebel for="rebirth-quantity">Quantity:</label>
+        <input type="number" name="rebirth-quantity" min="0" value="0">
+        <hr class="horizontal-line">
+
+        <br>
+
+        <img id="food-img-2" alt="The Death Rebirth Stew" width="100" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apko-c5e0579e-f7dd-4e4f-a64b-67090723867c.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_26am_by_caiohsf_dl9apko-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBrby1jNWUwNTc5ZS1mN2RkLTRlNGYtYTY0Yi02NzA5MDcyMzg2N2MucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.h1svb6ggeVWkZvT5LBe_Jpn9y5pAH6GEp54Aq8F8V4E">
+        <h3>The Emperor’s Iron Feast</h3>
+        <p><i>$32</i></p>
+        <label for="iron-feast-quantity">Quantity:</label>
+        <input type="number" name="iron-feast-quantity" min="0" value="0">
+        <hr class="horizontal-line">        
+
+        <br>
+
+        <img id="food-img-2" alt="The Magician's Alchemical Plate" width="100" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7d77dd9-d6e4-441f-b47e-37eac958c415/dl9apky-2798beaf-f93e-4630-97de-be47e3d74839.png/v1/fill/w_894,h_894,q_70,strp/generated_image_january_10__2026___8_26am__1__by_caiohsf_dl9apky-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiIvZi9iN2Q3N2RkOS1kNmU0LTQ0MWYtYjQ3ZS0zN2VhYzk1OGM0MTUvZGw5YXBreS0yNzk4YmVhZi1mOTNlLTQ2MzAtOTdkZS1iZTQ3ZTNkNzQ4MzkucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.kmDISgphhKxTR6xLSrM84MQo7tpdctJLat4RanuuhsA">
+        <h3>The Magician's Alchemical Plate</h3>
+        <p><i>$25</i></p>
+        <label for="iron-feast-quantity">Quantity:</label>
+        <input type="number" name="iron-feast-quantity" min="0" value="0">
+        <hr class="horizontal-line">    
+           
+
+        
+
+
+
+
+    <!-- ADD-ONS -->
+   <h3>Add-ons</h3>
+
+    <label class="option">
+        <input type="checkbox" name="addons" value="salt-moon">
+        <span>Salt of the Moon</span>
+    </label>
+
+    <label class="option">
+        <input type="checkbox" name="addons" value="pepper-dust">
+        <span>Sun-Dried Pepper Dust</span>
+    </label>
+
+    <label class="option">
+        <input type="checkbox" name="addons" value="smoke-drizzle">
+        <span>Herbal Smoke Drizzle</span>
+    </label>
+
+    <!-- CHOOSE YOUR SIDE -->
+    <hr class="horizontal-line">
+    <h3>Choose Your Side</h3>
+
+    <label class="option">
+        <input type="radio" name="side" value="crispy-potatoes">
+        <span>The Fool’s Crispy Potatoes – $7</span>
+    </label>
+
+    <label class="option">
+        <input type="radio" name="side" value="veiled-greens">
+        <span>The High Priestess’ Veiled Greens – $8</span>
+    </label>
+
+    <label class="option">
+        <input type="radio" name="side" value="honeyed-carrots">
+        <span>The Lovers’ Honeyed Carrots – $7</span>
+    </label>
+
+
+    <!-- SPECIAL REQUESTS -->    
+     <br><br>
+    <label for="special-requests">Any allergies, dietary restrictions, or special requests?</label><br>
+    <textarea id="special-requests" placeholder="Please let us know about any special requirements..."></textarea>     
+
+    <!-- SUBMIT -->
+    <hr class="horizontal-line">
+    <input type="submit" value="Go To Checkout">
+    </form>
+
+    <!-- FOOTER -->
+     <footer>
+        <p>Made with love by Caio Hermínio</p>
+    </footer>
+
+
+</section>
+
+
+
+    
+</body>
+</html>
